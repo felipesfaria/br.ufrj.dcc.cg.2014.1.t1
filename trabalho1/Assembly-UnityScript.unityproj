@@ -69,6 +69,8 @@
      <Compile Include="Assets\SciFi level\Standard Assets\Image Effects (Pro Only)\Triangles.js" />
      <Compile Include="Assets\SciFi level\Standard Assets\Image Effects (Pro Only)\Vignetting.js" />
      <Compile Include="Assets\fightBOT (free)\script\robo_animationCheck_free.js" />
+     <Compile Include="Assets\groundHandler.js" />
+     <Compile Include="Assets\pathHandler.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\SciFi level\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\SciFi level\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
