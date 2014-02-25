@@ -20,3 +20,10 @@ Obstaculos extras
 	obstaculos em movimento
 	fogo ou fumaça
 	outros modificadores de velocidade (esteiras)
+Adicionar sons
+	trilha sonora
+	efeitos sonoros
+		passos
+		colisão
+		agua
+		...
