@@ -1,0 +1,56 @@
+Trabalho 1 CG 2014-1
+Trabalho 1 de Computação GráficTurma 2014.1 – Prof. Rodrigo Toledo
+
+Regras
+Trabalhos devem ser feitos em duplas
+Quem fizer individual perderá 1.0 ponto
+As duplas não podem ser repetidas em outros trabalhos
+Apresentação do trabalho:
+Cada dupla terá 10 minutos para apresentar no laboratório
+Cada dupla deverá se certificar que o trabalho rode e compile na máquina da apresentação
+A demonstração deverá conter:
+Exemplos de execução
+Código compilando
+Entrega do trabalho: 10 de março
+Nota:
+Quem realizar corretamente o enunciado mínimo terá garantida a nota 6.0
+Para obter nota maior que 6.0 a implementação deve fazer algo a mais.
+Game (In)finity runner
+Enunciado Mínimo:
+Jogo plataforma em 3ª pessoa, estilo infinity runner (subway surfer, minion rush).
+Plataforma linear com obstáculos.
+Descrição:
+- jogador (3ª pessoa) anda para frente, para os lados (nunca para trás) e salta
+- o jogador deve desviar dos obstáculos
+- fim de jogo: ou por tempo, ou por distância percorrida, ou por colisão
+Obstáculos mínimos:
+modificador de velocidade
+poça d’água
+outro tipo de poça (ex: areia movediça, neve, óleo)
+algum obstáculo para saltar por cima (com textura e normalmap)
+alteardor de iluminação (ex: apaga-se a luz por alguns segundos)
+Sugestões de temas para os cenários:
+- floresta
+- futurista
+- deserto
+- shopping (rolezinho runner)
+- fábrica
+Obstáculos extras:
+vidro (vide Minion rush)
+obstáculos em movimento
+fogo ou fumaça (sistemas de partículas)
+outros modificadores de velocidade (ex: esteira de setas)
+Efeitos extras:
+- efeitos visuais na água (especular, ondulação, reflexão)
+- áudio (música/efeito sonoro)
+Extras de Jogabilidade:
+- cenário procedural (nunca se repete) ((vide no Unity: instantiate e destroy))
+- jogador sempre andando
+- separar em 3 raias
+- pemitir o jogador se abaixar
+- contagem de pontos
+- coletagem de prêmios ou power-ups
+- outras posições de câmera (em tempo de jogo)
+Super Extras:
+- vertex/fragment shader para fazer os efeitos (por exemplo, na água).
+Published by Google Drive–Report Abuse–Updated automatically every 5 minutes
