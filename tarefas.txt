@@ -1,0 +1,22 @@
+Feito: Criar personagem
+Feito: Personagem se mover
+Criar o cenario
+Poça de agua
+Outra Poça(???)
+obstaculo para saltar (com textura e normalmap)
+Alterar a luz
+Fim de jogo
+	Final
+	Colisão
+Sempre andar pra frente
+Raias
+Cenario se repetir
+Contagem de pontos
+	distancia
+	pick up
+Mover a camera em jogo
+Obstaculos extras
+	Vidro
+	obstaculos em movimento
+	fogo ou fumaça
+	outros modificadores de velocidade (esteiras)
