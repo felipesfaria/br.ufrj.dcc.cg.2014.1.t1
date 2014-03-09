@@ -9,7 +9,7 @@ function Start () {
 
 function Update () {
 	
-	if(mooving == 1 && (transform.position >= 2.5 || transform.position <= -2.5 || transform.position == 0))
+	if(mooving == 1 && (transform.position.x >= 2.5 || transform.position.x <= -2.5 || transform.position.x == 0))
 	
 	if(mooving == 1)
 		transform.position.x += Time.deltaTime;
