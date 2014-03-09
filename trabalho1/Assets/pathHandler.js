@@ -10,13 +10,14 @@ function Update () {
 
 }
 
-function teste(){
+function moveGround(){
 	if(estado==1){
 		estado=2;
 		var move=ground1.transform.position.z-ground2.transform.position.z;
 		Debug.Log("scale "+ground1.transform.localScale.z);
 		Debug.Log("Move "+move);
-		ground1.transform.position+=Vector3(0,0,-move*2);
+		var planeSize = ground1.transform.localScale.z*10;
+		ground1.transform.position+=Vector3(0,0,planeSize*2);
 	}else if(estado==2){
 		estado=1;
 		ground2.transform.position+=Vector3(0,0,100);
