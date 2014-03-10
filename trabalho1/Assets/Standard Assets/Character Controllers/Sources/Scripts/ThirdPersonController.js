@@ -13,6 +13,7 @@ public var runMaxAnimationSpeed : float = 1.0;
 public var jumpAnimationSpeed : float = 1.15;
 public var landAnimationSpeed : float = 1.0;
 
+
 private var _animation : Animation;
 
 enum CharacterState {
@@ -23,7 +24,6 @@ enum CharacterState {
 	Jumping = 4,
 }
 
-public var waterSpeedFactor: float = 2.0;
 
 private var _characterState : CharacterState;
 
@@ -51,6 +51,23 @@ var canJump = true;
 private var jumpRepeatTime = 0.05;
 private var jumpTimeout = 0.15;
 private var groundedTimeout = 0.25;
+
+// controle para pontuaçao
+private var lastPos : float;
+
+// Controle de Velocidade na Agua
+public var waterSpeedFactor: float = 2.0;
+
+// Controle de Som
+var solidStepSound : AudioClip;
+var waterStepSound : AudioClip;
+var stepSize : float;
+private var lastStep : float;
+private var inWater = false;
+
+// Controle de execuçao
+private var vivo = true;
+private var playerStartPos;
 
 // The camera doesnt start following the target immediately but waits for a split second to avoid too much waving around.
 private var lockCameraTimer = 0.0;
@@ -288,7 +305,32 @@ function DidJump ()
 	_characterState = CharacterState.Jumping;
 }
 
+function Start(){
+	lastPos = transform.position.z;
+	lastStep = transform.position.z;
+	playerStartPos=transform.position;
+}
+
 function Update() {
+	//nao faz nada se o jogo estiver parado
+	if(!vivo)
+		return;
+		
+	if(transform.position.z-lastPos>1){
+		lastPos = transform.position.z;
+		pontuarPasso();
+	}
+	
+	if(transform.position.z-lastStep>stepSize&&!jumping){
+		lastStep = transform.position.z;
+		if(inWater){
+			audio.clip = waterStepSound;
+			audio.Play();
+		}else{
+			audio.clip = solidStepSound;
+			audio.Play();
+		}
+	}
 	
 	if (!isControllable)
 	{
@@ -444,12 +486,31 @@ function Reset ()
 
 function enterWater(){
 	Debug.Log("Entrei na agua!");
+	inWater=true;
 	runSpeed*=1/waterSpeedFactor;
 	runMaxAnimationSpeed*=1/waterSpeedFactor;
+	stepSize*=waterSpeedFactor*0.5;
 }
 
 function exitWater(){
 	Debug.Log("Sai da agua!");
+	inWater=false;
 	runSpeed*=waterSpeedFactor;
 	runMaxAnimationSpeed*=waterSpeedFactor;
+	stepSize*=1/waterSpeedFactor*2;
+}
+
+function pontuarPasso(){
+	this.gameObject.transform.parent.gameObject.SendMessage("pontuarPasso");
+}
+
+function comecar(){
+	transform.position=playerStartPos;
+	lastPos = transform.position.z;
+	lastStep = transform.position.z;
+	vivo=true;
+}
+
+function parar(){
+	vivo=false;
 }
