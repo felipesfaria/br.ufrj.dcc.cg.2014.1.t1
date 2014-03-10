@@ -29,6 +29,7 @@ function Update () {
 	if(Input.GetKeyDown("f")){
 		Debug.Log("Fim!");
 		vivo=false;
+		player.SendMessage("parar");
 	}
 }
 
@@ -77,5 +78,7 @@ function OnGUI(){
 }
 
 function reset(){
+	points=0;
 	vivo=true;
+	player.SendMessage("comecar");
 }
