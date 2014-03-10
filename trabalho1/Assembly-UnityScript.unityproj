@@ -49,7 +49,6 @@
      <Compile Include="Assets\fightBOT (free)\script\robo_animationCheck_free.js" />
      <Compile Include="Assets\groundHandler.js" />
      <Compile Include="Assets\pathHandler.js" />
-     <Compile Include="Assets\pointCounter.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

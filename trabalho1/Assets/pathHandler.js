@@ -1,12 +1,13 @@
-#pragma strict
 public var ground1 : GameObject;
 public var ground2 : GameObject;
+public var trigger : GameObject;
 public var player : GameObject;
 
 public var blackTexture : Texture2D;
 
 //Qual cenario esta embaixo do personagem
 public var estado;
+
 
 //Variaveis para placar
 var points : int=0;
@@ -18,6 +19,7 @@ private var vivo = true;
 
 //Variaveis de inicializaçao
 private var startPosPlayer;
+
 
 function Start () {
 	estado=1;
@@ -39,16 +41,16 @@ function exitWater(){
 }
 
 function moveGround(){
+	var planeSize = ground1.transform.localScale.z*10;
+
 	if(estado==1){
 		estado=2;
-		var move=ground1.transform.position.z-ground2.transform.position.z;
-		Debug.Log("scale "+ground1.transform.localScale.z);
-		Debug.Log("Move "+move);
-		var planeSize = ground1.transform.localScale.z*10;
 		ground1.transform.position+=Vector3(0,0,planeSize*2);
+		trigger.transform.position+=Vector3(0,0,planeSize*2);
 	}else if(estado==2){
 		estado=1;
-		ground2.transform.position+=Vector3(0,0,100);
+		ground2.transform.position+=Vector3(0,0,planeSize*2);
+		trigger.transform.position+=Vector3(0,0,planeSize*2);
 	}
 	
 }

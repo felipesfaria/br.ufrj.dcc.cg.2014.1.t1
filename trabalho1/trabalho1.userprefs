@@ -1,12 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\pathHandler.js">
     <Files>
-      <File FileName="Assets\HorizontalMove.js" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="489" Column="32" />
-      <File FileName="Assets\groundHandler.js" Line="7" Column="35" />
-      <File FileName="Assets\pathHandler.js" Line="78" Column="12" />
-      <File FileName="Assets\WaterColision.js" Line="12" Column="46" />
+      <File FileName="Assets\pathHandler.js" Line="4" Column="32" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="493" Column="1" />
+      <File FileName="Assets\HorizontalMove.js" Line="14" Column="23" />
+      <File FileName="Assets\WaterColision.js" Line="2" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
