@@ -1,6 +1,7 @@
 #pragma strict
 public var ground1 : GameObject;
 public var ground2 : GameObject;
+public var player : GameObject;
 public var estado;
 function Start () {
 	estado=1;
@@ -8,6 +9,14 @@ function Start () {
 
 function Update () {
 
+}
+
+function enterWater(){
+	player.SendMessage("enterWater");
+}
+
+function exitWater(){
+	player.SendMessage("exitWater");
 }
 
 function moveGround(){

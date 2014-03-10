@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\HorizontalMove.js" />
+     <Compile Include="Assets\WaterColision.js" />
      <Compile Include="Assets\fightBOT (free)\script\robo_animationCheck_free.js" />
      <Compile Include="Assets\groundHandler.js" />
      <Compile Include="Assets\pathHandler.js" />

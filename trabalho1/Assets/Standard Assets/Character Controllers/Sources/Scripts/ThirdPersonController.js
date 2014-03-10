@@ -23,6 +23,8 @@ enum CharacterState {
 	Jumping = 4,
 }
 
+public var waterSpeedFactor: float = 2.0;
+
 private var _characterState : CharacterState;
 
 // The speed when walking
@@ -440,3 +442,14 @@ function Reset ()
 	gameObject.tag = "Player";
 }
 
+function enterWater(){
+	Debug.Log("Entrei na agua!");
+	runSpeed*=1/waterSpeedFactor;
+	runMaxAnimationSpeed*=1/waterSpeedFactor;
+}
+
+function exitWater(){
+	Debug.Log("Sai da agua!");
+	runSpeed*=waterSpeedFactor;
+	runMaxAnimationSpeed*=waterSpeedFactor;
+}
