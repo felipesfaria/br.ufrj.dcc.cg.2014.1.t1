@@ -20,7 +20,7 @@ function Update () {
 	if(ativo){ //Personagem esta mudando de faixa
 		switch(_raiaAtual){
 			case Raia.Esquerda://meio->esquerda
-				if(transform.position.x>-2.5){
+				if(transform.position.x>-2.7){
 					transform.position.x-=velocidadeX;
 				} else {
 					ativo=false;
@@ -45,7 +45,7 @@ function Update () {
 				}
 				break;
 			case Raia.Direita://meio->direita
-				if(transform.position.x<2.5){
+				if(transform.position.x<2.7){
 					transform.position.x+=velocidadeX;
 				} else {
 					ativo=false;
