@@ -44,10 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ApagaLuz.js" />
      <Compile Include="Assets\HorizontalMove.js" />
+     <Compile Include="Assets\ObstacleColision.js" />
      <Compile Include="Assets\WaterColision.js" />
      <Compile Include="Assets\fightBOT (free)\script\robo_animationCheck_free.js" />
+     <Compile Include="Assets\getPoint.js" />
      <Compile Include="Assets\groundHandler.js" />
+     <Compile Include="Assets\oicollision.js" />
      <Compile Include="Assets\pathHandler.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -57,6 +61,7 @@
      <None Include="Assets\fightBOT (free)\model\Materials\roboShader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Oil.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />

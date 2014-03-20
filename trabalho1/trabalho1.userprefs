@@ -2,10 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js">
     <Files>
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="510" Column="34" />
-      <File FileName="Assets\pathHandler.js" Line="32" Column="31" />
-      <File FileName="Assets\HorizontalMove.js" Line="14" Column="23" />
-      <File FileName="Assets\WaterColision.js" Line="2" Column="1" />
+      <File FileName="Assets\getPoint.js" Line="14" Column="7" />
+      <File FileName="Assets\HorizontalMove.js" Line="38" Column="7" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="332" Column="17" />
+      <File FileName="Assets\pathHandler.js" Line="80" Column="26" />
+      <File FileName="Assets\WaterColision.js" Line="1" Column="1" />
+      <File FileName="Assets\ObstacleColision.js" Line="5" Column="20" />
+      <File FileName="Assets\ApagaLuz.js" Line="9" Column="26" />
+      <File FileName="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Oil.shader" Line="1" Column="1" />
+      <File FileName="Assets\oicollision.js" Line="12" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,8 +1,9 @@
 #pragma strict
 public var velocidadeX : float;
 public var velocidadeRot : float;
-var mooving; //1 = direita, 0 = nada, -1 esquerda
-enum Raia {
+public var distanciaRaias : float;
+private var mooving; //1 = direita, 0 = nada, -1 esquerda
+private enum Raia {
 	Esquerda = 0,
 	Meio = 1,
 	Direita = 2,
@@ -20,7 +21,7 @@ function Update () {
 	if(ativo){ //Personagem esta mudando de faixa
 		switch(_raiaAtual){
 			case Raia.Esquerda://meio->esquerda
-				if(transform.position.x>-2.7){
+				if(transform.position.x>-distanciaRaias){
 					transform.position.x-=velocidadeX;
 				} else {
 					ativo=false;
@@ -45,7 +46,7 @@ function Update () {
 				}
 				break;
 			case Raia.Direita://meio->direita
-				if(transform.position.x<2.7){
+				if(transform.position.x<distanciaRaias){
 					transform.position.x+=velocidadeX;
 				} else {
 					ativo=false;

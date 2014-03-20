@@ -12,7 +12,7 @@ public var estado;
 //Variaveis para placar
 var points : int=0;
 var pointsPerUnit : int=1;
-var pointsPerToken : int=5;
+var pointsPerToken : int=100;
 
 //Variaveis de Controle de execuçao
 private var vivo = true;
@@ -41,6 +41,19 @@ function exitWater(){
 	player.SendMessage("exitWater");
 }
 
+function enterOil(){
+	player.SendMessage("enterOil");
+}
+
+function exitOil(){
+	player.SendMessage("exitOil");
+}
+
+function die(){
+	vivo = false;
+	player.SendMessage("parar");
+}
+
 function moveGround(){
 	var planeSize = ground1.transform.localScale.z*10;
 
@@ -59,6 +72,12 @@ function moveGround(){
 function pontuarPasso(){
 	if(vivo)
 		points+=pointsPerUnit;
+}
+
+function getPoint(){
+	Debug.Log("peguei ponto");
+	if(vivo)
+		points+=pointsPerToken;
 }
 
 function OnGUI(){

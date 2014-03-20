@@ -57,6 +57,7 @@ private var lastPos : float;
 
 // Controle de Velocidade na Agua
 public var waterSpeedFactor: float = 2.0;
+public var oilSpeedFactor: float = 0.5;
 
 // Controle de Som
 var solidStepSound : AudioClip;
@@ -484,6 +485,23 @@ function Reset ()
 	gameObject.tag = "Player";
 }
 
+function enterOil(){
+	Debug.Log("Entrei na oil!");
+	inWater=true;
+	runSpeed*=1/oilSpeedFactor;
+	runMaxAnimationSpeed*=1/oilSpeedFactor;
+	stepSize*=oilSpeedFactor*0.5;
+}
+
+function exitOil(){
+	Debug.Log("Sai da oil!");
+	inWater=false;
+	runSpeed*=oilSpeedFactor;
+	runMaxAnimationSpeed*=oilSpeedFactor;
+	stepSize*=1/oilSpeedFactor*2;
+}
+
+
 function enterWater(){
 	Debug.Log("Entrei na agua!");
 	inWater=true;
@@ -505,10 +523,7 @@ function pontuarPasso(){
 }
 
 function comecar(){
-	transform.position=playerStartPos;
-	lastPos = transform.position.z;
-	lastStep = transform.position.z;
-	vivo=true;
+	Application.LoadLevel("cena2");
 }
 
 function parar(){
